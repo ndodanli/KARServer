@@ -13,7 +13,6 @@ public class KarApplication extends SpringBootServletInitializer {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(KarApplication.class, args);
         Server.runServer();
     }
 }

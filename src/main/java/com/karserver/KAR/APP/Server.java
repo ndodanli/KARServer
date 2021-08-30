@@ -7,27 +7,27 @@ import java.util.ArrayList;
 
 public class Server {
 
-    static final int PORT = 443;
+    static final int PORT = 80;
     public static ArrayList<EchoThread> threads;
     public static int index;
 
     public static void runServer() {
-        System.out.println("WORKED");
+        //System.out.println("WORKED");
         ServerSocket serverSocket = null;
         Socket socket = null;
         threads = new ArrayList<>();
         index = 0;
         try {
             serverSocket = new ServerSocket(PORT);
-            System.out.println(serverSocket);
+           // System.out.println(serverSocket);
         } catch (IOException e) {
-            System.out.println("Error: " + e);
+           // System.out.println("Error: " + e);
         }
         while (true) {
             try {
                 socket = serverSocket.accept();
             } catch (IOException e) {
-                System.out.println("I/O error: " + e);
+                //System.out.println("I/O error: " + e);
             }
             // new thread for a client
             threads.add(new EchoThread(socket, index));
