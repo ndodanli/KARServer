@@ -12,12 +12,14 @@ public class Server {
     public static int index;
 
     public static void runServer() {
+        System.out.println("WORKED");
         ServerSocket serverSocket = null;
         Socket socket = null;
         threads = new ArrayList<>();
         index = 0;
         try {
-            serverSocket = new ServerSocket(PORT);
+            serverSocket = new ServerSocket();
+            System.out.println(serverSocket);
         } catch (IOException e) {
             //System.out.println("Error: " + e);
         }
@@ -25,7 +27,7 @@ public class Server {
             try {
                 socket = serverSocket.accept();
             } catch (IOException e) {
-                //System.out.println("I/O error: " + e);
+                System.out.println("I/O error: " + e);
             }
             // new thread for a client
             threads.add(new EchoThread(socket, index));

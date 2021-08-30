@@ -46,7 +46,7 @@ public class EchoThread extends Thread {
                         Server.threads.get(getOtherClientsId()).out.writeBytes(line + "\n");
                         Server.threads.get(getOtherClientsId()).out.flush();
                     }else{
-                        //System.out.println("No client to retrieve data");
+                        System.out.println("No client to retrieve data");
                     }
                 }
             } catch (IOException e) {
