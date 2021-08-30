@@ -18,7 +18,7 @@ public class Client {
         final Socket clientSocket;
         final BufferedReader in;
         try {
-            clientSocket = new Socket(InetAddress.getLocalHost().getHostName(), 5000);
+            clientSocket = new Socket("spring-boot-complete-1630332816013.azurewebsites.net", 5000);
             in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
             try {
