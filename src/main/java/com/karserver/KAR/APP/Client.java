@@ -19,7 +19,7 @@ public class Client {
         final BufferedReader in;
         try {
             String host = "spring-boot-complete-1630332816013.azurewebsites.net";
-            clientSocket = new Socket(host, 443);
+            clientSocket = new Socket(host, 80);
             in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
             try {
