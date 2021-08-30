@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Server {
 
-    static final int PORT = 80;
+    static final int PORT = 443;
     public static ArrayList<EchoThread> threads;
     public static int index;
 
@@ -18,10 +18,10 @@ public class Server {
         threads = new ArrayList<>();
         index = 0;
         try {
-            serverSocket = new ServerSocket();
+            serverSocket = new ServerSocket(PORT);
             System.out.println(serverSocket);
         } catch (IOException e) {
-            //System.out.println("Error: " + e);
+            System.out.println("Error: " + e);
         }
         while (true) {
             try {
