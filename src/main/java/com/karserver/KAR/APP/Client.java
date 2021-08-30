@@ -20,7 +20,7 @@ public class Client {
         try {
             String host = "spring-boot-complete-1630332816013.azurewebsites.net",
                     hostLocal = "localhost";
-            clientSocket = new Socket(hostLocal, 5000);
+            clientSocket = new Socket(host, 5000);
             in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
             try {
