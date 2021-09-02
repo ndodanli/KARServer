@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Server {
 
-    static final int PORT = 8080;
+    static final int PORT = 5000;
     public static ArrayList<EchoThread> threads;
     public static int index;
 
